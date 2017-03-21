@@ -6,6 +6,7 @@ IT技术论坛
 * 开发环境：eclipse+mysql+tomcat
 * 使用技术：jsp+servlet+ajax+jdbc+struts2文件上传+qrcode二维码
 * 使用场景：校园计算机专业讨论社区
+* 部署环境：ubuntu14+tomcat7+jdk8+mysql5.5(地址http://www.justxzm.cn)
 
 > 文件说明	 
 
@@ -25,5 +26,4 @@ IT技术论坛
 * 制作于2016-11，该项目的前生是[Blog](https://github.com/justxzm/Blog)，在其基础上增加了用户注册、创建板块、关注用户(板块)、分享等功能，由个人博客改为了多用户的论坛
 * 由于在Blog基础上，所以同样没有分好层进行有效的封装抽象，将业务逻辑耦合在了jsp中，维护困难
 * 基本无注释，查看痛苦
-* Forum地址http://www.justxzm.cn
 * 大神绕过:)

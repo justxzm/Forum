@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.multipart.maxSize" value="1073741824" />
+	<!-- 设置上传文件的临时文件夹 -->
+	<constant name="struts.multipart.saveDir" value="/tmpUpload" />
+
+	<package name="default" extends="struts-default">
+		<action name="watermark" class="com.watermark.WaterMarkAction"
+			method="watermark">
+			<param name="uploadPath">/images</param>
+			<result name="success">front_develop/tools/watermark.jsp</result>
+		</action>
+		<action name="upload" method="test"
+			class="com.upload.UploadAction">
+
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/png
+					,image/jpg,image/jpeg</param>
+				<param name="maximumSize">1000000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+
+			<param name="savePath">/headImages</param>
+
+			<result name="input">/back_manage/rootSetUp.jsp</result>
+			<result name="success">/back_manage/rootSetUp.jsp</result>
+		</action>
+		<action name="upload2" method="test2"
+			class="com.upload.UploadAction">
+
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/png
+					,image/jpg,image/jpeg</param>
+				<param name="maximumSize">1000000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+
+			<param name="savePath">/headImages</param>
+
+			<result name="input">/back_manage/go_Modular_Edit.jsp</result>
+			<result name="success">/back_manage/go_Modular_Edit.jsp</result>
+		</action>
+	</package>
+</struts>

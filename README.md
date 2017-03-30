@@ -6,7 +6,7 @@ IT技术论坛
 * 开发环境：eclipse+mysql+tomcat
 * 使用技术：jsp+servlet+ajax+jdbc+struts2文件上传+qrcode二维码
 * 使用场景：校园计算机专业讨论社区
-* 部署环境：ubuntu14+tomcat7+jdk8+mysql5.5(地址http://www.justxzm.cn)
+* 部署环境：ubuntu14+tomcat7+jdk8+mysql5.5
 
 > 文件说明	 
 
